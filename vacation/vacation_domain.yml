@@ -1,0 +1,108 @@
+intents:
+ - greet
+ - affirm
+ - deny
+ - inform
+ - thankyou
+ - request_info
+ - goodbye
+ - transfer
+ - travel
+entities:
+ - startCity
+ - destCity
+ - destProvince
+ - destCountry
+ - city
+ - tripType
+ - startDate
+ - endDate
+ - date
+ - duration
+ - topicLabel
+ - startLevel
+ - isOverseas
+slots:
+  sightPois:
+    type: list 
+  startCity:
+    type: text
+  destCity:
+    type: text
+  destProvince:
+    type: text
+  destCountry:
+    type: text
+  city:
+    type: text
+  tripType:
+    type: text
+  startDate:
+    type: text
+  endDate:
+    type: text
+  duration:
+    type: text
+  topicLabel:
+    type: list
+  startLevel:
+    type: text
+  isOverseas:
+    type: text
+  vacations:
+    type: list
+templates:
+  utter_greet:
+    - "您好!很高兴为您服务"
+  utter_goodbye:
+    - "祝您生活愉快：）"
+  utter_default:
+    - "暂时回答不出"
+  utter_ack_dosearch:
+    - "以下是为您推荐的结果"
+  utter_ack_findalternatives:
+    - "ok let me see what else there is"
+  utter_ack_makereservation:
+    - "ok making a reservation"
+  utter_ask_sight_poi:
+    - "请问您想途经哪些景点？"
+  utter_ask_start_city:
+    - "请问您想从哪里出发？"
+  utter_ask_dest_place:
+    - "请问您想到哪里？"
+  utter_ask_helpmore:
+    - "请问您还需要其它服务吗?"
+  utter_ask_howcanhelp:
+    - "?"
+  utter_ask_moreupdates:
+    - "那您有什么其它要求吗?"
+  utter_ask_start_date:
+    - "请问您想什么时候出发？"
+  utter_ask_duration:
+    - "请问您想玩多久，到什么时候？"
+  utter_ask_trip_type:
+    - "请问您想要跟团还是自由行？"
+  utter_ask_topic_label:
+    - "请问您想什么类型的旅游，亲子游，全家游……？"
+  utter_on_it:
+    - "正在为您匹配..."
+actions:
+  - greet
+  - goodbye
+  - default
+  - ack_dosearch
+  - ack_findalternatives
+  - ack_makereservation
+  - ask_sight_poi
+  - ask_start_city
+  - ask_dest_place
+  - ask_helpmore
+  - ask_howcanhelp
+  - ask_moreupdates
+  - ask_start_date
+  - ask_duration
+  - ask_trip_type
+  - ask_topic_label
+  - on_it
+  - vacation.actions.ActionSearchVacations
+  - vacation.actions.ActionShowRecommendReason
